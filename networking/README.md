@@ -383,11 +383,11 @@ GitHub Authentication Problem
 One of the main challenges I had during this lab happened when I tried to push my work to GitHub.
 I had successfully created my Git commit:
 
-Add networking lab documentation
+'''Add networking lab documentation'''
 
 However, when I tried:
 
-git push origin main
+'''git push origin main'''
 
 GitHub rejected the authentication and gave me an error saying that the username or token was invalid and that password authentication was not supported.At first, I tried to solve this by creating a GitHub Personal Access Token (PAT). I used my GitHub username and entered the Personal Access Token when Git asked for the password.
 
@@ -395,10 +395,10 @@ However, the Personal Access Token did not work either and GitHub continued to r
 I then looked for another way to authenticate and decided to use the GitHub CLI.
 
 I installed GitHub CLI using Homebrew:
-brew install gh
+'''brew install gh'''
 
 I then ran:
-gh auth login
+'''gh auth login'''
 
 I selected GitHub.com, chose HTTPS, and selected the option to log in through a web browser.GitHub gave me a code which I used to authenticate my account in the browser.After successfully logging in, I tried pushing my repository again:
 git push origin main
