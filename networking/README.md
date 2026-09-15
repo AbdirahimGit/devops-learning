@@ -378,6 +378,40 @@ This helped me understand how to troubleshoot networking problems one layer at a
 
 ---
 
+
+## GitHub Authentication Problem
+
+One of the main challenges I encountered during this lab was pushing my work to GitHub.
+
+I had successfully created my Git commit:
+
+```text
+Add networking lab documentation
+However, when I tried to push it using:
+git push origin main
+GitHub rejected the authentication and returned an error stating that the username or token was invalid and that password authentication was not supported.
+Attempt 1: Personal Access Token
+My first solution was to create a GitHub Personal Access Token (PAT) and use it instead of my GitHub password.
+I entered my GitHub username and used the Personal Access Token when Git prompted me for a password. However, this method did not work either, and GitHub continued to reject the authentication.
+Attempt 2: GitHub CLI
+Since the Personal Access Token approach was unsuccessful, I decided to try the GitHub CLI as an alternative authentication method.
+I installed GitHub CLI using Homebrew:
+brew install gh
+I then started the authentication process:
+gh auth login
+During the setup, I:
+Selected GitHub.com
+Selected HTTPS as the Git protocol
+Chose to authenticate using a web browser
+Used the authentication code provided by GitHub
+Authorised my GitHub account in the browser
+After successfully authenticating through GitHub CLI, I tried pushing my changes again:
+git push origin main
+This time, the push was successful.
+What I Learned
+This was a useful challenge because it showed me that things do not always work on the first attempt when working with DevOps tools.
+I learned how to troubleshoot a GitHub authentication problem and try alternative solutions when the first approach did not work. I also gained experience using GitHub CLI and Homebrew to authenticate GitHub from the terminal.
+The main lesson I took away from this was that troubleshooting is an important part of DevOps. When something fails, it is important to understand the error, investigate possible causes, and try different approaches until the problem is resolved.
 ## 15. Screenshots
 
 ### EC2 Instance
