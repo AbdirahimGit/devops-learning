@@ -1,6 +1,4 @@
-# devops-learning
-
- Networking Project — EC2, NGINX & DNS
+# Networking Project — EC2, NGINX & DNS
 
 ## 1. Project Overview
 
