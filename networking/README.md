@@ -378,40 +378,39 @@ This helped me understand how to troubleshoot networking problems one layer at a
 
 ---
 
+GitHub Authentication Problem
 
-## GitHub Authentication Problem
-
-One of the main challenges I encountered during this lab was pushing my work to GitHub.
-
+One of the main challenges I had during this lab happened when I tried to push my work to GitHub.
 I had successfully created my Git commit:
 
-```text
 Add networking lab documentation
-However, when I tried to push it using:
+
+However, when I tried:
+
 git push origin main
-GitHub rejected the authentication and returned an error stating that the username or token was invalid and that password authentication was not supported.
-Attempt 1: Personal Access Token
-My first solution was to create a GitHub Personal Access Token (PAT) and use it instead of my GitHub password.
-I entered my GitHub username and used the Personal Access Token when Git prompted me for a password. However, this method did not work either, and GitHub continued to reject the authentication.
-Attempt 2: GitHub CLI
-Since the Personal Access Token approach was unsuccessful, I decided to try the GitHub CLI as an alternative authentication method.
+
+GitHub rejected the authentication and gave me an error saying that the username or token was invalid and that password authentication was not supported.At first, I tried to solve this by creating a GitHub Personal Access Token (PAT). I used my GitHub username and entered the Personal Access Token when Git asked for the password.
+
+However, the Personal Access Token did not work either and GitHub continued to reject the push.
+I then looked for another way to authenticate and decided to use the GitHub CLI.
+
 I installed GitHub CLI using Homebrew:
 brew install gh
-I then started the authentication process:
+
+I then ran:
 gh auth login
-During the setup, I:
-Selected GitHub.com
-Selected HTTPS as the Git protocol
-Chose to authenticate using a web browser
-Used the authentication code provided by GitHub
-Authorised my GitHub account in the browser
-After successfully authenticating through GitHub CLI, I tried pushing my changes again:
+
+I selected GitHub.com, chose HTTPS, and selected the option to log in through a web browser.GitHub gave me a code which I used to authenticate my account in the browser.After successfully logging in, I tried pushing my repository again:
 git push origin main
-This time, the push was successful.
-What I Learned
-This was a useful challenge because it showed me that things do not always work on the first attempt when working with DevOps tools.
-I learned how to troubleshoot a GitHub authentication problem and try alternative solutions when the first approach did not work. I also gained experience using GitHub CLI and Homebrew to authenticate GitHub from the terminal.
-The main lesson I took away from this was that troubleshooting is an important part of DevOps. When something fails, it is important to understand the error, investigate possible causes, and try different approaches until the problem is resolved.
+This time it worked.
+
+What I learnt from this
+
+This was useful because it showed me that things don't always work on the first attempt when working with DevOps tools.I learnt how to troubleshoot GitHub authentication instead of just giving up when the Personal Access Token didn't work.I also learnt how to use GitHub CLI and Homebrew to authenticate my GitHub account from the terminal.
+
+The main thing I took away from this was that troubleshooting is an important part of working in DevOps. Sometimes you need to try a different approach and understand why something is failing before you can fix it.
+
+
 ## 15. Screenshots
 
 ### EC2 Instance
